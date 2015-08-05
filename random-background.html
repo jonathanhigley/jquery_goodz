@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>johnny's jQuery goodz</title>
+  <meta name="description" content="Goods">
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  
+  <style>
+  	section#hero {
+		min-height:900px;width:100%;
+	    -webkit-background-size: cover;
+	    -moz-background-size: cover;
+	    -o-background-size: cover;
+	    background-size: cover;
+	}
+  </style>
+  
+</head>
+	<body>
+		<section id="hero"></section>
+	<script>
+		var img_dir = "img/backgrounds/";
+		var images = ['image1.jpg', 'image2.jpg', 'image3.jpg', 'image4.jpg', 'image5.jpg'];
+		// use images.length to calculate how many images are in your array and then use the .random() to pull em in at random:
+		$('html').css({'background-image': 'url(' + img_dir + images[Math.floor(Math.random() * images.length)] + ')'});
+	</script>
+	</body>
+</html>
